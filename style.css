@@ -1,66 +1,92 @@
+/* === General Layout === */
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  line-height: 1.6;
   margin: 0;
-  padding: 0;
-  background: #f9fafb;
-  color: #222;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background-color: #f8fafc;
+  color: #333;
+  line-height: 1.6;
 }
 
 header {
-  background: #006d77;
-  color: white;
-  text-align: center;
-  padding: 2rem 1rem;
+  background: #1e293b;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-h1 {
-  margin: 0;
-  font-size: 2.2em;
+/* === Navbar === */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #22c55e;
+}
+
+/* === Sections === */
+.section {
+  padding: 3rem 2rem;
+  max-width: 900px;
+  margin: auto;
 }
 
 h2 {
-  color: #006d77;
-  border-bottom: 2px solid #83c5be;
-  padding-bottom: 5px;
+  border-left: 5px solid #22c55e;
+  padding-left: 10px;
+  color: #1e293b;
+  margin-bottom: 1rem;
 }
 
-section {
-  margin: 2rem auto;
-  max-width: 800px;
-  background: white;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-a {
-  color: #006d77;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+ul {
+  padding-left: 1.2rem;
 }
 
 .btn {
   display: inline-block;
-  background: #83c5be;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: #22c55e;
   color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  margin-top: 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
 }
 
 .btn:hover {
-  background: #006d77;
+  background: #16a34a;
 }
 
+/* === Footer === */
 footer {
+  background: #1e293b;
+  color: #ccc;
   text-align: center;
-  padding: 1rem;
-  background: #edf6f9;
-  color: #333;
-  font-size: 0.9em;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  font-size: 0.9rem;
 }
 
+@media (max-width: 700px)
