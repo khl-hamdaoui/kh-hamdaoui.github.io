@@ -1,49 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Khaled Hamdaoui | Geotechnical Engineering & AI</title>
   <meta name="description" content="PhD Candidate in Geotechnical Engineering specializing in AI for soil behavior prediction.">
   <meta name="keywords" content="Geotechnical Engineering, Machine Learning, SHAP, XGBoost, PSO, MLP, Soil Compression Index, Data Science">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
   <header>
-    <h1>Khaled Hamdaoui</h1>
-    <p>PhD Candidate in Geotechnical Engineering | Data Science Enthusiast</p>
+    <nav class="navbar">
+      <h1 class="logo">Khaled Hamdaoui</h1>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#publication">Research</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I am a PhD candidate specializing in the application of Artificial Intelligence to Geotechnical Engineering. My research focuses on modeling and interpreting soil compressibility using SHAP, XGBoost, and PSO-MLP hybrid models.</p>
-    <a href="CV_PhD_Khaled_Hamdaoui.pdf" target="_blank" class="btn">Download My CV</a>
-  </section>
+  <main id="home" class="content">
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <p>
+        I am a PhD candidate in Geotechnical Engineering with a research focus on the
+        application of Artificial Intelligence to soil mechanics. My work integrates
+        interpretable machine learning models such as SHAP, XGBoost, and PSO-MLP hybrids
+        to analyze and predict soil compressibility and related properties.
+      </p>
+      <a href="CV_PhD_Khaled_Hamdaoui.pdf" target="_blank" class="btn">Download My CV</a>
+    </section>
 
-  <section id="publication">
-    <h2>Featured Publication</h2>
-    <p><strong>Hamdaoui, K.</strong> et al. (2025). <em>Interpretable Machine Learning for Predicting Compression Index of Clays Using SHAP and Gradient Boosting Models.</em> Journal of Engineering and Applied Science, 72:148.</p>
-    <a href="https://doi.org/10.1186/s44147-025-00727-4" class="btn">View Paper (DOI)</a>
-  </section>
+    <section id="publication" class="section">
+      <h2>Featured Publication</h2>
+      <p>
+        <strong>Hamdaoui, K.</strong> et al. (2025). 
+        <em>Interpretable Machine Learning for Predicting Compression Index of Clays Using SHAP and Gradient Boosting Models.</em>
+        <br>Journal of Engineering and Applied Science, 72:148.
+      </p>
+      <a href="https://doi.org/10.1186/s44147-025-00727-4" target="_blank" class="btn">View Paper (DOI)</a>
+    </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li>Soil Compression Index Prediction using XGBoost, CatBoost, and LightGBM.</li>
-      <li>PSO-MLP hybrid model for clay swelling potential prediction.</li>
-      <li>Geotechnical data visualization using Python and Power BI.</li>
-    </ul>
-  </section>
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <ul>
+        <li>Soil Compression Index Prediction using XGBoost, CatBoost, and LightGBM.</li>
+        <li>PSO-MLP hybrid model for clay swelling potential prediction.</li>
+        <li>Geotechnical data visualization using Python and Power BI.</li>
+      </ul>
+    </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>📧 <a href="mailto:khd.hamdaoui@gmail.com">khd.hamdaoui@gmail.com</a></p>
-    <p>🔗 <a href="https://github.com/khaedhamdaoui">GitHub</a> | <a href="https://linkedin.com/in/khaled-hamdaoui">LinkedIn</a></p>
-  </section>
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>
+        You can explore my work and research contributions through the links below.
+      </p>
+      <p>
+        <a href="https://github.com/khaedhamdaoui" target="_blank">GitHub</a> |
+        <a href="https://linkedin.com/in/khaled-hamdaoui" target="_blank">LinkedIn</a>
+      </p>
+    </section>
+  </main>
 
   <footer>
     <p>© 2025 Khaled Hamdaoui | Built with ❤️ on GitHub Pages</p>
   </footer>
+
+  <script>
+    // Smooth scrolling for tabs
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 </body>
 </html>
