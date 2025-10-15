@@ -6,18 +6,389 @@
   <title>Khaled Hamdaoui | Geotechnical Engineering & Artificial Intelligence</title>
   <meta name="description" content="PhD candidate in Geotechnical Engineering applying AI, Machine Learning, and SHAP interpretability for soil behavior prediction.">
   <meta name="keywords" content="Geotechnical Engineering, Artificial Intelligence, Machine Learning, SHAP, XGBoost, PSO, MLP, Soil Compression Index, Data Science">
-  <link rel="stylesheet" href="style.css">
   <link rel="icon" href="favicon.ico">
+  <style>
+    /* --- Global --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Inter", "-apple-system", "Segoe UI", sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+      color: #1a1a1a;
+      scroll-behavior: smooth;
+      line-height: 1.6;
+    }
+
+    /* --- Hero Section --- */
+    .hero {
+      background: linear-gradient(135deg, #0f4c75 0%, #1b5e9c 50%, #1b5e9c 100%);
+      color: white;
+      text-align: center;
+      padding: 10rem 2rem 8rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+      border-radius: 50%;
+      top: -50px;
+      right: -100px;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+      border-radius: 50%;
+      bottom: -80px;
+      left: -80px;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      animation: slideUp 0.8s ease-out;
+    }
+
+    .name {
+      font-size: 3.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+
+    .title {
+      font-size: 1.3rem;
+      margin-bottom: 2.5rem;
+      font-weight: 400;
+      opacity: 0.95;
+      letter-spacing: 0.3px;
+    }
+
+    .hero-btn {
+      display: inline-block;
+      background: white;
+      color: #0f4c75;
+      font-weight: 600;
+      padding: 0.9rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .hero-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+
+    /* --- Navbar --- */
+    .navbar {
+      background: rgba(15, 76, 117, 0.98);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 1rem 1.8rem;
+      display: block;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .navbar a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: #64b5f6;
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    .navbar a:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    .navbar a:hover::after {
+      width: 80%;
+    }
+
+    /* --- Sections --- */
+    .section {
+      max-width: 1000px;
+      margin: 3.5rem auto;
+      background: white;
+      border-radius: 14px;
+      padding: 3rem;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+      border-top: 4px solid #0f4c75;
+    }
+
+    .section h2 {
+      color: #0f4c75;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .section p {
+      color: #444;
+      margin-bottom: 1.2rem;
+      font-size: 1.05rem;
+    }
+
+    .section a {
+      color: #0f4c75;
+      font-weight: 600;
+    }
+
+    /* --- Buttons --- */
+    .btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #0f4c75, #1b5e9c);
+      color: white;
+      padding: 0.85rem 1.8rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(15, 76, 117, 0.3);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(15, 76, 117, 0.4);
+    }
+
+    /* --- Cards --- */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: linear-gradient(135deg, #f8f9fa 0%, #f0f3f7 100%);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+      border-left: 4px solid #0f4c75;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -50px;
+      width: 100px;
+      height: 100px;
+      background: radial-gradient(circle, rgba(15, 76, 117, 0.05) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(15, 76, 117, 0.15);
+    }
+
+    .card h3 {
+      color: #0f4c75;
+      margin-bottom: 0.8rem;
+      font-size: 1.2rem;
+      font-weight: 700;
+      position: relative;
+      z-index: 1;
+    }
+
+    .card p {
+      color: #666;
+      font-size: 0.95rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* --- Publication Box --- */
+    .publication {
+      background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+      padding: 2rem;
+      border-radius: 12px;
+      margin: 1.5rem 0;
+      border-left: 4px solid #0f4c75;
+    }
+
+    .publication strong {
+      color: #0f4c75;
+    }
+
+    .publication em {
+      color: #1565c0;
+    }
+
+    /* --- Contact Links --- */
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 2rem;
+      justify-content: center;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-size: 1.05rem;
+    }
+
+    .contact-item a {
+      text-decoration: none;
+      color: #0f4c75;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .contact-item a:hover {
+      color: #1b5e9c;
+      text-decoration: underline;
+    }
+
+    /* --- Footer --- */
+    footer {
+      text-align: center;
+      padding: 3rem 1rem;
+      color: #888;
+      font-size: 0.95rem;
+      background: rgba(15, 76, 117, 0.02);
+      margin-top: 2rem;
+      border-top: 1px solid rgba(0,0,0,0.05);
+    }
+
+    /* --- Animations --- */
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* --- Responsive --- */
+    @media (max-width: 768px) {
+      .name {
+        font-size: 2.5rem;
+      }
+
+      .title {
+        font-size: 1.1rem;
+      }
+
+      .hero {
+        padding: 7rem 1.5rem 5rem;
+      }
+
+      .section {
+        margin: 2.5rem 1rem;
+        padding: 2rem;
+      }
+
+      .section h2 {
+        font-size: 1.7rem;
+      }
+
+      .navbar a {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.95rem;
+      }
+
+      .contact-info {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .name {
+        font-size: 2rem;
+      }
+
+      .hero {
+        padding: 5rem 1rem 3.5rem;
+      }
+
+      .section {
+        margin: 1.5rem 0.5rem;
+        padding: 1.5rem;
+      }
+
+      .navbar {
+        gap: 0;
+      }
+
+      .navbar a {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
   <!-- Header -->
   <header class="hero">
-    <div class="overlay"></div>
     <div class="hero-content">
       <h1 class="name">Khaled Hamdaoui</h1>
-      <p class="title">PhD Candidate in Geotechnical Engineering | Artificial Intelligence Researcher</p>
-      <a href="#about" class="btn hero-btn">Explore More ↓</a>
+      <p class="title">PhD Candidate in Geotechnical Engineering | AI Researcher</p>
+      <a href="#about" class="hero-btn">Explore More ↓</a>
     </div>
   </header>
 
@@ -31,7 +402,7 @@
 
   <!-- About -->
   <section id="about" class="section fade-in">
-    <h2>About Me</h2>
+    <h2>📌 About Me</h2>
     <p>
       I am a PhD candidate in Geotechnical Engineering with a focus on integrating Artificial Intelligence and data-driven modeling 
       into soil mechanics. My work explores explainable AI models, hybrid optimization (PSO-MLP), and SHAP-based interpretability 
@@ -43,18 +414,20 @@
 
   <!-- Research -->
   <section id="research" class="section fade-in">
-    <h2>Featured Publication</h2>
-    <p>
-      <strong>Hamdaoui, K.</strong> et al. (2025). 
-      <em>Interpretable Machine Learning for Predicting Compression Index of Clays Using SHAP and Gradient Boosting Models.</em> 
-      <br>Journal of Engineering and Applied Science, 72:148.
-    </p>
+    <h2>🔬 Featured Publication</h2>
+    <div class="publication">
+      <p>
+        <strong>Hamdaoui, K.</strong> et al. (2025). 
+        <em>"Interpretable Machine Learning for Predicting Compression Index of Clays Using SHAP and Gradient Boosting Models."</em> 
+        <br>Journal of Engineering and Applied Science, 72:148.
+      </p>
+    </div>
     <a href="https://doi.org/10.1186/s44147-025-00727-4" class="btn" target="_blank">🔗 View Paper (DOI)</a>
   </section>
 
   <!-- Projects -->
   <section id="projects" class="section fade-in">
-    <h2>Research Projects</h2>
+    <h2>🚀 Research Projects</h2>
     <div class="cards">
       <div class="card">
         <h3>Soil Compression Index Prediction</h3>
@@ -77,11 +450,22 @@
 
   <!-- Contact -->
   <section id="contact" class="section fade-in">
-    <h2>Contact</h2>
-    <p>If you are interested in collaboration or discussing research, feel free to reach out.</p>
-    <p>📧 <a href="mailto:khd.hamdaoui@gmail.com">khd.hamdaoui@gmail.com</a></p>
-    <p>🌐 <a href="https://github.com/khaedhamdaoui" target="_blank">GitHub</a> | 
-           <a href="https://linkedin.com/in/khaled-hamdaoui" target="_blank">LinkedIn</a></p>
+    <h2>💬 Get in Touch</h2>
+    <p>Interested in collaboration or discussing research? Feel free to reach out through any of these channels.</p>
+    <div class="contact-info">
+      <div class="contact-item">
+        <span>📧</span>
+        <a href="mailto:khd.hamdaoui@gmail.com">khd.hamdaoui@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        <span>💻</span>
+        <a href="https://github.com/khaedhamdaoui" target="_blank">GitHub</a>
+      </div>
+      <div class="contact-item">
+        <span>🔗</span>
+        <a href="https://linkedin.com/in/khaled-hamdaoui" target="_blank">LinkedIn</a>
+      </div>
+    </div>
   </section>
 
   <!-- Footer -->
@@ -94,19 +478,22 @@
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
       });
     });
 
-    // Fade-in effect
+    // Fade-in effect on scroll
     const sections = document.querySelectorAll('.fade-in');
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
       });
-    }, { threshold: 0.2 });
+    }, { threshold: 0.15 });
 
     sections.forEach(section => observer.observe(section));
   </script>
