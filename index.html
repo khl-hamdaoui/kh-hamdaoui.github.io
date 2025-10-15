@@ -1,85 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Khaled Hamdaoui | Geotechnical Engineering & AI</title>
-  <meta name="description" content="PhD Candidate in Geotechnical Engineering specializing in AI for soil behavior prediction.">
-  <meta name="keywords" content="Geotechnical Engineering, Machine Learning, SHAP, XGBoost, PSO, MLP, Soil Compression Index, Data Science">
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khaled Hamdaoui | Geotechnical Engineering & Artificial Intelligence</title>
+  <meta name="description" content="PhD candidate in Geotechnical Engineering applying AI, Machine Learning, and SHAP interpretability for soil behavior prediction.">
+  <meta name="keywords" content="Geotechnical Engineering, Artificial Intelligence, Machine Learning, SHAP, XGBoost, PSO, MLP, Soil Compression Index, Data Science">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico">
 </head>
-
 <body>
-  <header>
-    <nav class="navbar">
-      <h1 class="logo">Khaled Hamdaoui</h1>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#publication">Research</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+
+  <!-- Header -->
+  <header class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1 class="name">Khaled Hamdaoui</h1>
+      <p class="title">PhD Candidate in Geotechnical Engineering | Artificial Intelligence Researcher</p>
+      <a href="#about" class="btn hero-btn">Explore More ↓</a>
+    </div>
   </header>
 
-  <main id="home" class="content">
-    <section id="about" class="section">
-      <h2>About Me</h2>
-      <p>
-        I am a PhD candidate in Geotechnical Engineering with a research focus on the
-        application of Artificial Intelligence to soil mechanics. My work integrates
-        interpretable machine learning models such as SHAP, XGBoost, and PSO-MLP hybrids
-        to analyze and predict soil compressibility and related properties.
-      </p>
-      <a href="CV_PhD_Khaled_Hamdaoui.pdf" target="_blank" class="btn">Download My CV</a>
-    </section>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <section id="publication" class="section">
-      <h2>Featured Publication</h2>
-      <p>
-        <strong>Hamdaoui, K.</strong> et al. (2025). 
-        <em>Interpretable Machine Learning for Predicting Compression Index of Clays Using SHAP and Gradient Boosting Models.</em>
-        <br>Journal of Engineering and Applied Science, 72:148.
-      </p>
-      <a href="https://doi.org/10.1186/s44147-025-00727-4" target="_blank" class="btn">View Paper (DOI)</a>
-    </section>
+  <!-- About -->
+  <section id="about" class="section fade-in">
+    <h2>About Me</h2>
+    <p>
+      I am a PhD candidate in Geotechnical Engineering with a focus on integrating Artificial Intelligence and data-driven modeling 
+      into soil mechanics. My work explores explainable AI models, hybrid optimization (PSO-MLP), and SHAP-based interpretability 
+      for predicting soil compressibility and swelling potential. I aim to bridge the gap between traditional geotechnical analysis 
+      and modern computational intelligence.
+    </p>
+    <a href="CV_PhD_Khaled_Hamdaoui.pdf" target="_blank" class="btn">📄 Download CV</a>
+  </section>
 
-    <section id="projects" class="section">
-      <h2>Projects</h2>
-      <ul>
-        <li>Soil Compression Index Prediction using XGBoost, CatBoost, and LightGBM.</li>
-        <li>PSO-MLP hybrid model for clay swelling potential prediction.</li>
-        <li>Geotechnical data visualization using Python and Power BI.</li>
-      </ul>
-    </section>
+  <!-- Research -->
+  <section id="research" class="section fade-in">
+    <h2>Featured Publication</h2>
+    <p>
+      <strong>Hamdaoui, K.</strong> et al. (2025). 
+      <em>Interpretable Machine Learning for Predicting Compression Index of Clays Using SHAP and Gradient Boosting Models.</em> 
+      <br>Journal of Engineering and Applied Science, 72:148.
+    </p>
+    <a href="https://doi.org/10.1186/s44147-025-00727-4" class="btn" target="_blank">🔗 View Paper (DOI)</a>
+  </section>
 
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <p>
-        You can explore my work and research contributions through the links below.
-      </p>
-      <p>
-        <a href="https://github.com/khaedhamdaoui" target="_blank">GitHub</a> |
-        <a href="https://linkedin.com/in/khaled-hamdaoui" target="_blank">LinkedIn</a>
-      </p>
-    </section>
-  </main>
+  <!-- Projects -->
+  <section id="projects" class="section fade-in">
+    <h2>Research Projects</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Soil Compression Index Prediction</h3>
+        <p>Developed gradient boosting models (XGBoost, CatBoost, LightGBM) to predict the compression index with SHAP interpretability.</p>
+      </div>
+      <div class="card">
+        <h3>PSO-MLP Hybrid Modeling</h3>
+        <p>Designed a Particle Swarm Optimization–based Multilayer Perceptron for accurate swelling potential estimation.</p>
+      </div>
+      <div class="card">
+        <h3>Explainable AI for Geotechnics</h3>
+        <p>Implemented SHAP and global sensitivity analysis to explain model predictions in soil parameter estimation.</p>
+      </div>
+      <div class="card">
+        <h3>Data Visualization Tools</h3>
+        <p>Created interactive dashboards and visual analytics using Python, Power BI, and Streamlit for soil datasets.</p>
+      </div>
+    </div>
+  </section>
 
+  <!-- Contact -->
+  <section id="contact" class="section fade-in">
+    <h2>Contact</h2>
+    <p>If you are interested in collaboration or discussing research, feel free to reach out.</p>
+    <p>📧 <a href="mailto:khd.hamdaoui@gmail.com">khd.hamdaoui@gmail.com</a></p>
+    <p>🌐 <a href="https://github.com/khaedhamdaoui" target="_blank">GitHub</a> | 
+           <a href="https://linkedin.com/in/khaled-hamdaoui" target="_blank">LinkedIn</a></p>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>© 2025 Khaled Hamdaoui | Built with ❤️ on GitHub Pages</p>
+    <p>© 2025 Khaled Hamdaoui | Built with ❤️ using GitHub Pages</p>
   </footer>
 
   <script>
-    // Smooth scrolling for tabs
+    // Smooth scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
+      anchor.addEventListener('click', function(e) {
         e.preventDefault();
         document.querySelector(this.getAttribute('href')).scrollIntoView({
           behavior: 'smooth'
         });
       });
     });
+
+    // Fade-in effect
+    const sections = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => observer.observe(section));
   </script>
 </body>
 </html>
