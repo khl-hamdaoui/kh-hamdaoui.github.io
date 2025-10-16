@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Khaled Hamdaoui | Geotechnical Engineering & Artificial Intelligence</title>
-  <meta name="description" content="PhD candidate in Geotechnical Engineering applying AI and Machine Learning for soil behavior prediction.">
+  <title>Khaled Hamdaoui | Geotechnical Engineering & AI Research</title>
+  <meta name="description" content="PhD candidate in Geotechnical Engineering specializing in machine learning for soil behavior prediction, SHAP interpretability, and gradient boosting models.">
   <link rel="icon" href="favicon.ico">
   <style>
     * {
@@ -20,7 +20,6 @@
       line-height: 1.6;
     }
 
-    /* Header */
     header {
       background: #f5f5f5;
       border-bottom: 2px solid #333;
@@ -40,7 +39,6 @@
       font-style: italic;
     }
 
-    /* Navigation */
     .navbar {
       background: #fff;
       border-bottom: 1px solid #ddd;
@@ -67,7 +65,6 @@
       border-bottom: 2px solid #333;
     }
 
-    /* Main Content */
     .container {
       max-width: 900px;
       margin: 0 auto;
@@ -86,13 +83,20 @@
       padding-bottom: 0.5rem;
     }
 
+    h3 {
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-top: 1.2rem;
+      margin-bottom: 0.6rem;
+      color: #222;
+    }
+
     p {
       margin-bottom: 1rem;
       text-align: justify;
       color: #444;
     }
 
-    /* Publication Box */
     .publication {
       background: #fafafa;
       border-left: 3px solid #333;
@@ -102,9 +106,9 @@
 
     .publication p {
       margin: 0.5rem 0;
+      font-size: 0.95rem;
     }
 
-    /* Cards */
     .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -118,18 +122,18 @@
       background: #fafafa;
     }
 
-    .card h3 {
-      font-size: 1.1rem;
+    .card h4 {
+      font-size: 1rem;
       font-weight: bold;
       margin-bottom: 0.8rem;
     }
 
     .card p {
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       color: #555;
+      margin: 0.5rem 0;
     }
 
-    /* Buttons */
     .btn {
       display: inline-block;
       background: #333;
@@ -137,9 +141,11 @@
       padding: 0.6rem 1.2rem;
       text-decoration: none;
       font-size: 0.9rem;
-      margin: 0.5rem 0;
+      margin: 0.5rem 0.5rem 0.5rem 0;
       border: 1px solid #333;
       transition: all 0.3s;
+      cursor: pointer;
+      border-radius: 2px;
     }
 
     .btn:hover {
@@ -147,7 +153,16 @@
       color: #333;
     }
 
-    /* Contact */
+    .btn-secondary {
+      background: #0066cc;
+      border-color: #0066cc;
+    }
+
+    .btn-secondary:hover {
+      background: white;
+      color: #0066cc;
+    }
+
     .contact-info {
       margin-top: 1.5rem;
     }
@@ -165,7 +180,19 @@
       text-decoration: underline;
     }
 
-    /* Footer */
+    .highlight-box {
+      background: #f0f8ff;
+      border-left: 4px solid #0066cc;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .highlight-box h4 {
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      color: #0066cc;
+    }
+
     footer {
       text-align: center;
       padding: 2rem;
@@ -176,7 +203,6 @@
       margin-top: 3rem;
     }
 
-    /* Responsive */
     @media (max-width: 768px) {
       .name {
         font-size: 2rem;
@@ -198,68 +224,171 @@
 </head>
 <body>
 
-  <!-- Header -->
   <header>
     <h1 class="name">Khaled Hamdaoui</h1>
-    <p class="title">PhD Candidate in Geotechnical Engineering | Artificial Intelligence Researcher</p>
+    <p class="title">PhD Candidate in Geotechnical Engineering | Machine Learning & Explainable AI Researcher</p>
   </header>
 
-  <!-- Navigation -->
   <nav class="navbar">
     <a href="#about">About</a>
+    <a href="#publications">Publications</a>
     <a href="#research">Research</a>
-    <a href="#projects">Projects</a>
+    <a href="#tools">Tools & Platform</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <!-- Main Content -->
   <div class="container">
 
-    <!-- About -->
+    <!-- About Section -->
     <section id="about" class="section">
       <h2>About</h2>
       <p>
-        I am a PhD candidate in Geotechnical Engineering with a focus on integrating Artificial Intelligence and data-driven modeling into soil mechanics. My work explores explainable AI models, hybrid optimization (PSO-MLP), and SHAP-based interpretability for predicting soil compressibility and swelling potential. I aim to bridge the gap between traditional geotechnical analysis and modern computational intelligence.
+        I am a PhD candidate in Geotechnical Engineering at Hassiba Benbouali University, Chlef, specializing in the development of interpretable machine learning frameworks for predicting soil behavior. My research focuses on integrating advanced gradient boosting algorithms (XGBoost, CatBoost, LightGBM) with explainable artificial intelligence methods (SHAP) to model complex soil-property relationships transparently and accurately.
       </p>
-      <a href="CV_PhD_Khaled_Hamdaoui.pdf" target="_blank" class="btn">Download CV (PDF)</a>
+      <p>
+        My doctoral research addresses critical challenges in geotechnical engineering by developing data-driven models that bridge classical soil mechanics with modern computational intelligence. The work emphasizes both predictive accuracy and model interpretability, essential for engineering applications requiring transparent decision-making.
+      </p>
+      <a href="CV_PhD_Khaled_Hamdaoui.pdf" target="_blank" class="btn">Download Full CV (PDF)</a>
     </section>
 
-    <!-- Research -->
-    <section id="research" class="section">
-      <h2>Featured Publication</h2>
+    <!-- Publications Section -->
+    <section id="publications" class="section">
+      <h2>Featured Publications</h2>
+
       <div class="publication">
-        <p><strong>Hamdaoui, K.</strong> et al. (2025). Interpretable Machine Learning for Predicting Compression Index of Clays Using SHAP and Gradient Boosting Models. <em>Journal of Engineering and Applied Science</em>, 72:148.</p>
+        <p><strong>Hamdaoui, K., Benzaamia, A., Sari Ahmed, B., Guellil, M. E., & Ghrici, M.</strong> (2025).</p>
+        <p><em>Interpretable Machine Learning for Predicting Compression Index of Clays Using SHAP and Gradient Boosting Models.</em></p>
+        <p><strong>Journal of Engineering and Applied Science</strong>, 72:148.</p>
+        <p><strong>DOI:</strong> <a href="https://doi.org/10.1186/s44147-025-00727-4" target="_blank">10.1186/s44147-025-00727-4</a></p>
+        <p><strong>Key contributions:</strong> Developed XGBoost model achieving R² = 0.913; demonstrated SHAP analysis revealing void ratio and water content as dominant predictors; integrated explainable AI for transparent geotechnical predictions.</p>
       </div>
-      <a href="https://doi.org/10.1186/s44147-025-00727-4" target="_blank" class="btn">View Publication</a>
+
+      <div class="publication">
+        <p><strong>Hamdaoui, K., Sari Ahmed, B., Guellil, M. E., & Ghrici, M.</strong> (2024).</p>
+        <p><em>A Hybrid Metaheuristic Approach using XGBoost and Particle Swarm Optimization to Evaluate Swelling Potential of Clayey Soil with Global Sensitivity Analysis.</em></p>
+        <p><strong>Key contributions:</strong> Implemented PSO-XGBoost hybrid optimization framework; conducted global sensitivity analysis using Sobol indices and Monte Carlo methods; achieved superior generalization capability through metaheuristic hyperparameter tuning.</p>
+      </div>
+
+      <div class="publication">
+        <p><strong>Hamdaoui, K., Sari Ahmed, B., Guellil, M. E., & Ghrici, M.</strong> (2024).</p>
+        <p><em>Data-Driven Prediction of Swelling Pressure in Expansive Soils Using Machine Learning Techniques.</em></p>
+        <p><strong>Key contributions:</strong> Compared four ML algorithms (PLR, SVR, RF, XGBoost); developed ensemble model achieving R² = 0.934 for swelling pressure prediction; validated models on geotechnical database of 266 samples.</p>
+      </div>
+
+      <div class="publication">
+        <p><strong>Hamdaoui, K., Sari Ahmed, B., Guellil, M. E., & Ghrici, M.</strong> (2024).</p>
+        <p><em>Leveraging Gradient Boosting Models for Robust Prediction on Incomplete Geotechnical Datasets.</em></p>
+        <p><strong>Key contributions:</strong> Evaluated three missing-value handling strategies; demonstrated CatBoost native support achieving R² = 0.98 on datasets with up to 59% missing values; developed web-based deployment platform.</p>
+      </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects" class="section">
+    <!-- Research Projects Section -->
+    <section id="research" class="section">
       <h2>Research Projects</h2>
+
+      <h3>1. Compression Index Prediction with Interpretability</h3>
+      <p>
+        Developed a comprehensive framework for predicting compression index (Cc) of clayey soils using 1,243 soil samples. Implemented three gradient boosting algorithms (XGBoost, CatBoost, LightGBM) with Optuna-based hyperparameter optimization. Integrated SHAP analysis to provide transparent explanations of model predictions, revealing void ratio and water content as primary drivers of soil compressibility.
+      </p>
+      <ul style="margin-left: 2rem; margin-bottom: 1rem;">
+        <li>Best model performance: XGBoost (R² = 0.913, RMSE = 0.197, MAE = 0.100)</li>
+        <li>SHAP analysis: Mean SHAP values identify e₀ = 0.20, w = 0.10 as dominant features</li>
+        <li>Cross-validation: 5-fold cross-validation with rigorous train-test separation</li>
+      </ul>
+
+      <h3>2. Swelling Potential Prediction with Hybrid Metaheuristic Optimization</h3>
+      <p>
+        Developed PSO-XGBoost hybrid framework optimizing hyperparameters through particle swarm optimization across 81 scenarios. Conducted comprehensive global sensitivity analysis using Sobol indices and polynomial chaos expansion to quantify feature contributions and interactions.
+      </p>
+      <ul style="margin-left: 2rem; margin-bottom: 1rem;">
+        <li>Dataset: 292 soil samples from 10 literature sources with diverse swelling properties</li>
+        <li>PSO optimization: 100 iterations yielding superior generalization vs. baseline XGBoost</li>
+        <li>Global sensitivity: Initial water content identified as dominant factor (Sobol index = 0.855)</li>
+      </ul>
+
+      <h3>3. Swelling Pressure Prediction Using Multiple ML Algorithms</h3>
+      <p>
+        Comparative analysis of polynomial lasso regression, support vector regression, random forest, and XGBoost for predicting maximum swelling pressure. Database compilation of 266 samples after outlier removal from 5 published studies.
+      </p>
+      <ul style="margin-left: 2rem; margin-bottom: 1rem;">
+        <li>Best performer: XGBoost (R² = 0.934, MAE = 0.148 MPa, RMSE = 0.189 MPa)</li>
+        <li>Input features: PL, PI, γd, and initial water content</li>
+        <li>Superior accuracy over traditional empirical correlations</li>
+      </ul>
+
+      <h3>4. Handling Missing Data in Geotechnical Datasets</h3>
+      <p>
+        Systematic evaluation of three missing-value handling strategies: native algorithm support, median imputation, and K-nearest neighbors imputation. Dataset with 13 input features and up to 59% missing values (395 samples).
+      </p>
+      <ul style="margin-left: 2rem; margin-bottom: 1rem;">
+        <li>Finding: Native handling consistently outperformed explicit imputation methods</li>
+        <li>CatBoost native support: R² = 0.98 (RMSE = 3.39, MAE = 2.51)</li>
+        <li>Practical implication: Reduces preprocessing burden while improving accuracy</li>
+      </ul>
+    </section>
+
+    <!-- Tools & Platform Section -->
+    <section id="tools" class="section">
+      <h2>Tools & Web-Based Platform</h2>
+
+      <div class="highlight-box">
+        <h4>Interactive Soil Swelling Potential Prediction Platform</h4>
+        <p>
+          Developed a comprehensive web application for practical deployment of machine learning models in geotechnical engineering. The platform integrates predictive modeling, interpretability analysis, and risk classification.
+        </p>
+        <a href="https://spp-lag-ai.streamlit.app/" target="_blank" class="btn btn-secondary">Access Web Platform</a>
+      </div>
+
+      <h3>Platform Features</h3>
       <div class="cards">
         <div class="card">
-          <h3>Soil Compression Index Prediction</h3>
-          <p>Developed gradient boosting models (XGBoost, CatBoost, LightGBM) to predict the compression index with SHAP interpretability.</p>
+          <h4>Single Sample Prediction</h4>
+          <p>Interactive form for entering 13 soil properties. Returns predicted swelling potential with confidence intervals and risk classification (low/medium/high).</p>
         </div>
         <div class="card">
-          <h3>PSO-MLP Hybrid Modeling</h3>
-          <p>Designed a Particle Swarm Optimization–based Multilayer Perceptron for accurate swelling potential estimation.</p>
+          <h4>Batch Processing</h4>
+          <p>Upload Excel files with multiple soil samples. Automatic processing with results including predictions, confidence intervals, SHAP contributions, and risk classifications for each case.</p>
         </div>
         <div class="card">
-          <h3>Explainable AI for Geotechnics</h3>
-          <p>Implemented SHAP and global sensitivity analysis to explain model predictions in soil parameter estimation.</p>
+          <h4>SHAP Interpretability</h4>
+          <p>Interactive visualizations (waterfall plots, force plots, beeswarm summaries) explaining how each soil property contributes to predictions at both global and local levels.</p>
         </div>
         <div class="card">
-          <h3>Data Visualization Tools</h3>
-          <p>Created interactive dashboards and visual analytics using Python, Power BI, and Streamlit for soil datasets.</p>
+          <h4>Risk Classification System</h4>
+          <p>Automated mapping of swelling potential to standard geotechnical risk categories. Provides distribution summaries for batch assessments to identify problematic soils.</p>
         </div>
       </div>
+
+      <h3>Technical Architecture</h3>
+      <p style="margin-top: 1.5rem;">
+        The platform is built on a modern, scalable architecture combining frontend and backend components:
+      </p>
+      <ul style="margin-left: 2rem; margin-bottom: 1rem;">
+        <li><strong>Frontend:</strong> Streamlit for interactive, browser-accessible user interface</li>
+        <li><strong>ML Models:</strong> XGBoost, CatBoost, LightGBM with Optuna hyperparameter optimization</li>
+        <li><strong>Interpretability:</strong> SHAP integration for both global and local explanations</li>
+        <li><strong>Data Processing:</strong> Scikit-learn, Pandas, NumPy for preprocessing and transformation</li>
+        <li><strong>Visualization:</strong> Matplotlib for high-quality SHAP visualizations</li>
+        <li><strong>Missing Data:</strong> Support for median imputation, KNN imputation, and native algorithm handling</li>
+      </ul>
+
+      <h3>Engineering Applications</h3>
+      <p>
+        The platform provides practical benefits for geotechnical professionals:
+      </p>
+      <ul style="margin-left: 2rem; margin-bottom: 1rem;">
+        <li>Rapid preliminary estimates of soil swelling during early design phases</li>
+        <li>Transparent decision-making through SHAP-based feature explanations</li>
+        <li>Cost-effective alternative to time-intensive laboratory testing</li>
+        <li>Support for large-scale geotechnical site assessments through batch processing</li>
+        <li>Risk-informed design through standardized classification system</li>
+      </ul>
     </section>
 
-    <!-- Contact -->
+    <!-- Contact Section -->
     <section id="contact" class="section">
       <h2>Contact</h2>
-      <p>For collaboration or research inquiries, please reach out through the following channels:</p>
+      <p>For collaboration, research inquiries, or technical questions regarding the predictive models and web platform:</p>
       <div class="contact-info">
         <div class="contact-item">
           <strong>Email:</strong> <a href="mailto:khd.hamdaoui@gmail.com">khd.hamdaoui@gmail.com</a>
@@ -270,18 +399,19 @@
         <div class="contact-item">
           <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/khaled-hamdaoui" target="_blank">linkedin.com/in/khaled-hamdaoui</a>
         </div>
+        <div class="contact-item">
+          <strong>Research Platform:</strong> <a href="https://spp-lag-ai.streamlit.app/" target="_blank">Soil Swelling Prediction Platform</a>
+        </div>
       </div>
     </section>
 
   </div>
 
-  <!-- Footer -->
   <footer>
-    <p>© 2025 Khaled Hamdaoui. All rights reserved.</p>
+    <p>© 2025 Khaled Hamdaoui. All rights reserved. | Geomaterials Laboratory, Hassiba Benbouali University, Chlef, Algeria</p>
   </footer>
 
   <script>
-    // Smooth scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
